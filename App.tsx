@@ -8,7 +8,7 @@ import ProfissionalLoginScreen from "./src/login/ProfissionalLoginScreen";
 
 function App(): JSX.Element{
   return(
-    <ClienteCadastroScreen/>
+    <ProfissionalCadastroScreen/>
   );
 }
 

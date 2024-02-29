@@ -37,8 +37,8 @@ function AdmCadastroScreen(): JSX.Element {
     console.log(dados);
   }
   return (
-    <ScrollView style={{ height: '100%', width: "auto" }}>
-      <View style={styles.container}>
+        <ScrollView style={{ height: '100%', width: "auto" }}>
+    <View style={styles.container}>
       <Image style={{...styles.logo, marginTop: 20}} resizeMode="contain" source={require('../assets/images/cliente.png')}/>
 
         <View style={styles.card}>
