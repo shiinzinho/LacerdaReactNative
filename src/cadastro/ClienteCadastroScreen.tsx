@@ -21,6 +21,7 @@ function AdmCadastroScreen(): JSX.Element {
   function cadastro() {
     const dados = {
       name: name,
+      celular: celular,
       email: email,
       cpf: cpf,
       dataNascimento,
@@ -56,10 +57,17 @@ function AdmCadastroScreen(): JSX.Element {
           <View style={styles.inputContainer}>
             <TextInput
               style={[styles.input, styles.fullWidth]}
+              placeholder="Celular"
+              placeholderTextColor="#151413"
+              onChangeText={(textCelular) => setCelular(textCelular)}
+            />
+          </View>
+          <View style={styles.inputContainer}>
+            <TextInput
+              style={[styles.input, styles.fullWidth]}
               placeholder="E-mail"
               placeholderTextColor="#151413"
               onChangeText={(textEmail) => setEmail(textEmail)}
-              secureTextEntry
             />
           </View>
           <View style={styles.inputContainer}>
@@ -76,7 +84,6 @@ function AdmCadastroScreen(): JSX.Element {
               placeholder="Data de Nascimento"
               placeholderTextColor="#151413"
               onChangeText={(textDataNascimento) => setDataNascimento(textDataNascimento)}
-              secureTextEntry
             />
           </View>
           <View style={styles.inputContainer}>
@@ -101,7 +108,6 @@ function AdmCadastroScreen(): JSX.Element {
               placeholder="País"
               placeholderTextColor="#151413"
               onChangeText={(textPais) => setPais(textPais)}
-              secureTextEntry
             />
           </View>
           <View style={styles.inputContainer}>
@@ -126,7 +132,6 @@ function AdmCadastroScreen(): JSX.Element {
               placeholder="Bairro"
               placeholderTextColor="#151413"
               onChangeText={(textBairro) => setBairro(textBairro)}
-              secureTextEntry
             />
           </View>
           <View style={styles.inputContainer}>
@@ -151,6 +156,7 @@ function AdmCadastroScreen(): JSX.Element {
               placeholder="Senha"
               placeholderTextColor="#151413"
               onChangeText={(textPassword) => setPassword(textPassword)}
+              secureTextEntry
             />
           </View>
 
