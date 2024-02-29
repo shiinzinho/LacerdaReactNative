@@ -1,27 +1,25 @@
 import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
-function ServicoCadastroScreen(): JSX.Element {
+function PagamentoCadastroScreen(): JSX.Element {
 
 
     const [name, setName] = useState("");
-    const [descricao, setDescricao] = useState("");
-    const [duracao, setDuracao] = useState("");
-    const [preco, setPreco] = useState("");
+    const [taxa, setTaxa] = useState("");
+    const [status, setStatus] = useState("");
 
     function cadastro(){
         const dados = {
             name: name,
-            descricao:descricao,
-            duracao: duracao,
-            preco: preco
+            taxa:taxa,
+            status: status,
         }
         console.log(dados);
     }
 
     return(
 <View style={styles.container}>
-            <Image style={styles.logo} resizeMode="contain" source={require('../assets/images/servico.png')}/>
+            <Image style={styles.logo} resizeMode="contain" source={require('../assets/images/pagamento.png')}/>
 
             <View style={styles.card}>
                 <Text style={styles.title}>
@@ -36,23 +34,17 @@ function ServicoCadastroScreen(): JSX.Element {
   />
   <TextInput
     style={[styles.input, styles.fullWidth]}
-    placeholder="Descrição"
+    placeholder="Taxa"
     placeholderTextColor="#151413"
-    onChangeText={(textDescricao) => setDescricao(textDescricao)}
+    onChangeText={(textTaxa) => setTaxa(textTaxa)}
   />
 </View>
 <View style={styles.inputContainer}>
   <TextInput
     style={[styles.input, styles.fullWidth]}
-    placeholder="Duração"
+    placeholder="Status"
     placeholderTextColor="#151413"
-    onChangeText={(textDuracao) => setDuracao(textDuracao)}
-  />
-  <TextInput
-    style={[styles.input, styles.fullWidth]}
-    placeholder="Preço"
-    placeholderTextColor="#151413"
-    onChangeText={(textPreco) => setPreco(textPreco)}
+    onChangeText={(textStatus) => setStatus(textStatus)}
   />
 </View>
 
@@ -131,4 +123,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default ServicoCadastroScreen;
+export default PagamentoCadastroScreen;

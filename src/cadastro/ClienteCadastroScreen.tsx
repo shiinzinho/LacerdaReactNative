@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView } from "react-native";
 
-function AdmCadastroScreen(): JSX.Element {
+function ClienteCadastroScreen(): JSX.Element {
 
   const [name, setName] = useState("");
   const [celular, setCelular] = useState("");
@@ -239,4 +239,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AdmCadastroScreen;
+export default ClienteCadastroScreen;
