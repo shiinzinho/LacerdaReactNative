@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView } from "react-native";
 
 function AdmCadastroScreen(): JSX.Element {
-
 
     const [name, setName] = useState("");
     const [celular, setCelular] = useState("");
@@ -37,15 +36,15 @@ function AdmCadastroScreen(): JSX.Element {
         }
         console.log(dados);
     }
-
     return(
-<View style={styles.container}>
+        <View style={styles.container}>
+            <ScrollView style={{height: '100%', width: "auto"}} contentContainerStyle={{paddingTop: 200}}>
             <Image style={styles.logo} resizeMode="contain" source={require('../assets/images/cliente.png')}/>
 
-            <View style={styles.card}>
-                <Text style={styles.title}>
-                    Cadastro para Cliente
-                </Text>
+                <View style={styles.card}>
+                    <Text style={styles.title}>
+                        Cadastro para Cliente
+                    </Text>
   <View style={styles.inputContainer}>
   <TextInput
     style={[styles.input, styles.fullWidth]}
@@ -161,7 +160,8 @@ function AdmCadastroScreen(): JSX.Element {
                 <TouchableOpacity>
                     <Text style={styles.forgotPassword}>Já possui conta? Entre!</Text>
                     </TouchableOpacity>
-            </View>
+                    </View>
+        </ScrollView>
         </View>
     );
 }
@@ -183,12 +183,12 @@ const styles = StyleSheet.create({
         flex: 1,
         marginRight: 5,
       },
-    container: {
+      container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#061153'
-    },
+        backgroundColor: '#061153',
+      },
     card:{
         backgroundColor: "#061781",
         width: 300,
