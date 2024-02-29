@@ -25,7 +25,7 @@ function AdmCadastroScreen(): JSX.Element {
 
             <View style={styles.card}>
                 <Text style={styles.title}>
-                    Cadastro
+                    Cadastro para Administrador
                 </Text>
                 <View style={styles.inputContainer}>
   <TextInput
@@ -59,13 +59,10 @@ function AdmCadastroScreen(): JSX.Element {
 </View>
 
                 <TouchableOpacity style={styles.button} onPress={() => {cadastro()}}>
-                    <Text style={styles.buttonText}>Entrar</Text>
+                    <Text style={styles.buttonText}>Cadastrar</Text>
                     </TouchableOpacity>
                 <TouchableOpacity>
-                    <Text style={styles.forgotPassword}>Esqueceu a senha?</Text>
-                    </TouchableOpacity>
-                <TouchableOpacity>
-                    <Text style={styles.forgotPassword}>Não possui conta? Cadastre-se!</Text>
+                    <Text style={styles.forgotPassword}>Já possui conta? Entre!</Text>
                     </TouchableOpacity>
             </View>
         </View>
